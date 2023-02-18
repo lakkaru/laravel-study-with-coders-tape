@@ -27,4 +27,9 @@ Route::view('/', 'welcome');
 Route::view('about', 'about');
 Route::view('contact', 'contact');
 
+Route::get('customers',  function(){
+    $customers =['Lakshman', 'sithija', 'Kulani'];
+    return view('internals.customers', ['customers' => $customers]);
+});
+
 
