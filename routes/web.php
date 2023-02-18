@@ -27,9 +27,7 @@ Route::view('/', 'welcome');
 Route::view('about', 'about');
 Route::view('contact', 'contact');
 
-Route::get('customers',  function(){
-    $customers =['Lakshman', 'sithija', 'Kulani'];
-    return view('internals.customers', ['customers' => $customers]);
-});
+// use App\Http\Controllers\CustomersController;
+Route::get('customers', 'App\Http\Controllers\CustomersController@list');
 
 
